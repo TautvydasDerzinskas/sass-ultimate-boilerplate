@@ -1,0 +1,17 @@
+/*
+
+  Usage:
+
+  .floating-div {
+    @include absolute(10px);
+  }
+
+*/
+
+@mixin absolute($gap: 0) {
+  position: absolute;
+  top: $gap;
+  left: $gap;
+  bottom: $gap;
+  right: $gap;
+}

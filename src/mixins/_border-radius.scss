@@ -1,0 +1,15 @@
+/*
+
+  Usage:
+
+  .card {
+    @include border-radius(0.8);
+  }
+
+*/
+
+@mixin border-radius($radius) {
+	border-radius: $radius !important;
+	-webkit-border-radius: $radius !important;
+	-moz-border-radius: $radius !important;
+}

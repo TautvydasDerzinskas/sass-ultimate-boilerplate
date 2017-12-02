@@ -1,0 +1,16 @@
+/*
+
+  Usage:
+
+  .card {
+    @include flex-order(-1);
+  }
+
+*/
+
+@mixin flex-order($position) {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: $position;
+  -ms-flex-order: $position;
+  order: $position;
+}

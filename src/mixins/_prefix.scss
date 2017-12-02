@@ -1,0 +1,17 @@
+/*
+  Fast vendor @support
+
+  Usage:
+
+  span.icon {
+    @include prefix(transform, rotate(45deg), webkit ms);
+  }
+
+*/
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}

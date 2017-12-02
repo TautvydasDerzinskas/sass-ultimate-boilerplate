@@ -1,0 +1,14 @@
+@function pxToRem($size, $fn-font-base: null) {
+  $base: $size;
+
+  @if ($fn-font-base != null) {
+    $base: $fn-font-base;
+  }
+  @else if ($font-base != null) {
+    $base: $font-base;
+  }
+
+  $remSize: $size / $base * 1rem;
+
+  @return #{$remSize};
+}
