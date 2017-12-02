@@ -1,6 +1,5 @@
 {
   "name": "sass-ultimate-boilerplate",
-  "version": "1.0.1",
   "description": "Sass boilerplate which is useful when starting a new web project. Includes: variables, functions, mixins, animations and other useful bits!",
   "main": "index.js",
   "repository": "https://github.com/SlimDogs/sass-ultimate-boilerplate.git",
