@@ -1,0 +1,18 @@
+/*
+
+  Usage:
+
+  div.msm-header {
+    @include parallax-background('/assets/images/header2_offset.jpg');
+  }
+
+*/
+
+@mixin parallax-background($url) {
+  background-image: url($url);
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}

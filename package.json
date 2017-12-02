@@ -1,17 +1,24 @@
 {
-  "name": "sass-boilerplate",
+  "name": "sass-ultimate-boilerplate",
   "version": "1.0.1",
   "description": "Sass boilerplate which is useful when starting a new web project. Includes: variables, functions, mixins, animations and other useful bits!",
   "main": "index.js",
-  "repository": "https://github.com/SlimDogs/sass-boilerplate.git",
+  "repository": "https://github.com/SlimDogs/sass-ultimate-boilerplate.git",
   "author": "Tautvydas Derzinskas <tautvydasuk@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "gulp",
-    "publish": "cd src && npm version patch && npm publish"
+    "build": "gulp"
   },
-  "dependencies": {
-    "gulp": "^3.9.1"
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-sass": "3.1.0",
+    "gulp-sass-lint": "1.3.4",
+    "cz-conventional-changelog": "2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

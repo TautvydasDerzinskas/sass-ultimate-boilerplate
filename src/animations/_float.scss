@@ -1,0 +1,39 @@
+$flaot-animation-speed: 4s;
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.1);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+		transform: translatey(0px);
+	}
+}
+
+%animation-float {
+  -webkit-animation: float $flaot-animation-speed ease-in-out infinite;
+  -moz-animation: float $flaot-animation-speed ease-in-out infinite;
+  -ms-animation: float $flaot-animation-speed ease-in-out infinite;
+  -o-animation: float $flaot-animation-speed ease-in-out infinite;
+  animation: float $flaot-animation-speed ease-in-out infinite;
+}
+
+.msm-animation-float {
+  @extend %animation-float;
+}
+
+/*
+
+  Usage (Sass):
+  div {
+    @extend %animation-float;
+  }
+
+  (CSS)
+  class="msm-animation-float"
+*/
