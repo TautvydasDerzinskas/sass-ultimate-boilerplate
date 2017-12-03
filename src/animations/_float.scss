@@ -1,3 +1,14 @@
+/**
+ * ### Float
+ * - `Type:` Animation
+ * - `Description:` Floating/hovering animation
+ *
+ * Usage:
+ * ```div {
+ *  @extend %animation-float;
+ * }```
+ */
+
 $flaot-animation-speed: 4s;
 
 @keyframes float {
@@ -22,18 +33,3 @@ $flaot-animation-speed: 4s;
   -o-animation: float $flaot-animation-speed ease-in-out infinite;
   animation: float $flaot-animation-speed ease-in-out infinite;
 }
-
-.msm-animation-float {
-  @extend %animation-float;
-}
-
-/*
-
-  Usage (Sass):
-  div {
-    @extend %animation-float;
-  }
-
-  (CSS)
-  class="msm-animation-float"
-*/

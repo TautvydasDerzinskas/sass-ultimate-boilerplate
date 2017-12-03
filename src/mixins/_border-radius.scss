@@ -1,12 +1,13 @@
-/*
-
-  Usage:
-
-  .card {
-    @include border-radius(0.8);
-  }
-
-*/
+/**
+ * ### Border-radius
+ * - `Type:` Mixin
+ * - `Description:` Vendorized border-radius shortcut
+ *
+ * Usage:
+ * ```.card {
+ *   @include border-radius(0.8);
+ * }```
+ */
 
 @mixin border-radius($radius) {
 	border-radius: $radius !important;

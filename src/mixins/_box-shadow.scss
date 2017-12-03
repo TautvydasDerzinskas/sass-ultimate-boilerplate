@@ -1,12 +1,13 @@
-/*
-
-  Usage:
-
-  .element {
-    @include box-shadow(5px, 3px, 10px, #000);
-  }
-
-*/
+/**
+ * ### Box-shadow
+ * - `Type:` Mixin
+ * - `Description:` Vendorized box-shadow shortcut
+ *
+ * Usage:
+ * ```.element {
+ *   @include box-shadow(5px, 3px, 10px, #000);
+ * }```
+ */
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {

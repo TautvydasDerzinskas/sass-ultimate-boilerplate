@@ -1,0 +1,10 @@
+/dist
+/docs
+/node_modules
+.editorconfig
+.gitignore
+.npmignore
+.sass-lint.yml
+.travis.yml
+gulpfile.js
+*.lock.json

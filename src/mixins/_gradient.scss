@@ -1,8 +1,22 @@
-/// Convert angle
-/// @author Chris Eppstein
-/// @param {Number} $value - Value to convert
-/// @param {String} $unit - Unit to convert to
-/// @return {Number} Converted angle
+/**
+ * ### Gradient
+ * - `Type:` Mixin
+ * - `Description:` Comfortable way of setting css gradients!
+ *
+ * Usage:
+ * ```.test-1 {
+ *  @include linear-gradient(#31B7D7, #EDAC7D);
+ * }
+ *
+ * .test-2 {
+ *   @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);
+ * }
+ *
+ * .test-3 {
+ *   @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);
+ * }```
+ */
+
 @function convert-angle($value, $unit) {
   $convertable-units: deg grad turn rad;
   $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
@@ -15,9 +29,6 @@
   @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
 }
 
-/// Test if `$value` is an angle
-/// @param {*} $value - Value to test
-/// @return {Bool}
 @function is-direction($value) {
   $is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
   $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
@@ -25,10 +36,6 @@
   @return $is-direction or $is-angle;
 }
 
-/// Convert a direction to legacy syntax
-/// @param {Keyword | Angle} $value - Value to convert
-/// @require {function} is-direction
-/// @require {function} convert-angle
 @function legacy-direction($value) {
   @if is-direction($value) == false {
     @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
@@ -56,12 +63,6 @@
   @return 90deg - convert-angle($value, 'deg');
 }
 
-/// Mixin printing a linear-gradient
-/// as well as a plain color fallback
-/// and the `-webkit-` prefixed declaration
-/// @access public
-/// @param {String | List | Angle} $direction - Linear gradient direction
-/// @param {Arglist} $color-stops - List of color-stops composing the gradient
 @mixin linear-gradient($direction, $color-stops...) {
   @if is-direction($direction) == false {
     $color-stops: ($direction, $color-stops);
@@ -72,18 +73,3 @@
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
-
-/*
-  Usage:
-  .test-1 {
-    @include linear-gradient(#31B7D7, #EDAC7D);
-  }
-
-  .test-2 {
-    @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);
-  }
-
-  .test-3 {
-    @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);
-  }
-*/

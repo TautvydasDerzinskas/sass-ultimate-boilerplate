@@ -1,12 +1,13 @@
-/*
-
-  Usage:
-
-  .card {
-    @include flex-order(-1);
-  }
-
-*/
+/**
+ * ### Flex-order
+ * - `Type:` Mixin
+ * - `Description:` Vendorized flex-order shortcut
+ *
+ * Usage:
+ * ```.card {
+ *   @include flex-order(-1);
+ * }```
+ */
 
 @mixin flex-order($position) {
   -webkit-box-ordinal-group: 0;

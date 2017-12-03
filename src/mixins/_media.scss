@@ -1,4 +1,28 @@
-@import '../variables';
+/**
+ * ### Media queries
+ * - `Type:` Mixin
+ * - `Description:` Easy media queries!
+ *
+ * Usage:
+ * ```.element {
+ *   width: 100px;
+ *   height: 100px;
+ *   background-color: black;
+ *
+ *   @include media-xs() {
+ *    background-color: white;
+ *   };
+ * }```
+ */
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1330px
+) !default;
 
 @mixin media-xs {
   @media (min-width: #{map-get($grid-breakpoints, xs)}) {

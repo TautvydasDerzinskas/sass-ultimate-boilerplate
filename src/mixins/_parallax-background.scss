@@ -1,12 +1,13 @@
-/*
-
-  Usage:
-
-  div.msm-header {
-    @include parallax-background('/assets/images/header2_offset.jpg');
-  }
-
-*/
+/**
+ * ### Parallax background
+ * - `Type:` Mixin
+ * - `Description:` Set parallax image backfround easy!
+ *
+ * Usage:
+ * ```div.msm-header {
+ *   @include parallax-background('/assets/images/header2_offset.jpg');
+ * }```
+ */
 
 @mixin parallax-background($url) {
   background-image: url($url);

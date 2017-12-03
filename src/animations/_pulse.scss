@@ -1,4 +1,13 @@
-@import "../variables";
+/**
+ * ### Pulse
+ * - `Type:` Animation
+ * - `Description:` Pulsing shadow/outline animation
+ *
+ * Usage:
+ * ```div {
+ *  @extend %pulse;
+ * }```
+ */
 
 %pulse {
   animation: pulse 2s infinite;
@@ -6,10 +15,6 @@
   &:hover {
     animation: none;
   }
-}
-
-.msm-animation-pulse {
-  @extend %pulse;
 }
 
 $pulse-primary-color: rgba(38, 166, 154, 0.4);
@@ -40,14 +45,3 @@ $pulse-secondary-color: rgba(38, 166, 154, 0);
       box-shadow: 0 0 0 0 $pulse-secondary-color;
   }
 }
-
-/*
-
-  Usage (Sass):
-  div {
-    @extend %pulse;
-  }
-
-  (CSS)
-  class="msm-animation-pulse"
-*/

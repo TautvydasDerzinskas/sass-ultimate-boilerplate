@@ -1,12 +1,13 @@
-/*
-
-  Usage:
-
-  .blured-text {
-    @include blur(0.8);
-  }
-
-*/
+/**
+ * ### Blur
+ * - `Type:` Mixin
+ * - `Description:` Vendorized blur
+ *
+ * Usage:
+ * ```.blured-text {
+ *   @include blur(0.8);
+ * }```
+ */
 
 @mixin blur($blur) {
   -webkit-filter: blur($blur);

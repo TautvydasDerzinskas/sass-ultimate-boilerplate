@@ -1,16 +1,14 @@
-/*
-
-  Usage:
-
-  a {
-    color: gray;
-    @include transition(color .3s ease);
-    &:hover {
-      color: black;
-    }
-  }
-
-*/
+/**
+ * ### Transition
+ * - `Type:` Mixin
+ * - `Description:` Vendorized transitions
+ *
+ * Usage:
+ * ```a {
+ *   color: gray;
+ *   @include transition(color .3s ease);
+ * }```
+ */
 
 @mixin transition($args...) {
   -webkit-transition: $args;

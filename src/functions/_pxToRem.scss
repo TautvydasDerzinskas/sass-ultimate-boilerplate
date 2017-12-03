@@ -1,3 +1,14 @@
+/**
+ * ### Pixels to rem
+ * - `Type:` Function
+ * - `Description:` Convert pixels to rems easealy
+ *
+ * Usage:
+ * ```div {
+ *  height: pxToRem(45px);
+ * }```
+ */
+
 @function pxToRem($size, $fn-font-base: null) {
   $base: $size;
 

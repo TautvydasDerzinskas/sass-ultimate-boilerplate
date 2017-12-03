@@ -1,6 +1,17 @@
+/**
+ * ### Spin
+ * - `Type:` Animation
+ * - `Description:` 360deg infinite spinning animation
+ *
+ * Usage:
+ * ```div {
+ *  @extend %spin;
+ * }```
+ */
+
 $spin-animation-speed: 0.5s;
 
-@-webkit-keyframes rotating /* Safari and Chrome */ {
+@-webkit-keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -28,7 +39,8 @@ $spin-animation-speed: 0.5s;
     transform: rotate(360deg);
   }
 }
-.animate--spin {
+
+%spin {
   display: inline-block;
   -webkit-animation: rotating $spin-animation-speed linear infinite;
   -moz-animation: rotating $spin-animation-speed linear infinite;

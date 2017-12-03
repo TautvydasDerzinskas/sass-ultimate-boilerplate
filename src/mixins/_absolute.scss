@@ -1,12 +1,13 @@
-/*
-
-  Usage:
-
-  .floating-div {
-    @include absolute(10px);
-  }
-
-*/
+/**
+ * ### Absolute
+ * - `Type:` Mixin
+ * - `Description:` Shortcut for setting position absolute with all positions containing same value
+ *
+ * Usage:
+ * ```div {
+ *  @include absolute(10px);
+ * }```
+ */
 
 @mixin absolute($gap: 0) {
   position: absolute;

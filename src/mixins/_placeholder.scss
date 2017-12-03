@@ -1,16 +1,17 @@
-/*
-
-  Usage:
-
-  input.element {
-    @include placeholder {
-        font-style:italic;
-        color: white;
-        font-weight:100;
-    }
-  }
-
-*/
+/**
+ * ### Placeholder
+ * - `Type:` Mixin
+ * - `Description:` Easy way of setting placeholder stylings
+ *
+ * Usage:
+ * ```input.element {
+ *   @include placeholder {
+ *       font-style:italic;
+ *       color: white;
+ *       font-weight:100;
+ *   }
+ * }```
+ */
 
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}

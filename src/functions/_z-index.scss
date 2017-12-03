@@ -1,11 +1,13 @@
-/*
-  Usage:
-
-  .site-header {
-    z-index: z('site-header');
-  }
-*/
-
+/**
+ * ### Fixed Z index
+ * - `Type:` Function
+ * - `Description:` Have and use a ordered and listed z-index values!
+ *
+ * Usage:
+ * ```div.header {
+ *  z-index: z('site-header');
+ * }```
+ */
 
 $z-indexes: (
   "outdated-browser",

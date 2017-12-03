@@ -1,15 +1,15 @@
-/*
-  Fast vendor @support
+/**
+ * ### Prefix or Vendorize
+ * - `Type:` Mixin
+ * - `Description:` Prefix or vendorize your style attributes
+ *
+ * Usage:
+ * ```span.icon {
+ *   @include prefix(transform, rotate(45deg), webkit ms);
+ * }```
+ */
 
-  Usage:
-
-  span.icon {
-    @include prefix(transform, rotate(45deg), webkit ms);
-  }
-
-*/
-
-@mixin prefix($property, $value, $prefixes: ()) {
+@mixin prefix($property, $value, $prefixes: (webkit ms)) {
   @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
   }
