@@ -5,9 +5,8 @@
  *
  * Usage:
  * ```scss
- * div {
- *  @include absolute(10px);
- * }```
+ * div { @include absolute(10px); }
+ * ```
  */
 
 @mixin absolute($gap: 0) {

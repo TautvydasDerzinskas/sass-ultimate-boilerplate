@@ -2,16 +2,18 @@
  * ### Pulse
  * - `Type:` Animation
  * - `Description:` Pulsing shadow/outline animation
+ * - `Variables:` To change spin speed please set variable `$pulse-animation-speed` to your prefered speed (default is `2s`) before `importing sass-boilerplate` or `animations` only
  *
  * Usage:
  * ```scss
- * div {
- *  @extend %pulse;
- * }```
+ * div { @extend %pulse; }
+ * ```
  */
 
 %pulse {
-  animation: pulse 2s infinite;
+  $pulse-animation-speed: 2s !default;
+
+  animation: pulse $pulse-animation-speed infinite;
 
   &:hover {
     animation: none;

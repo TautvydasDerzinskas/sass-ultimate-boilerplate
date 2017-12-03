@@ -5,9 +5,8 @@
  *
  * Usage:
  * ```scss
- * span.icon {
- *   @include prefix(transform, rotate(45deg), webkit ms);
- * }```
+ * .icon { @include prefix(transform, rotate(45deg), webkit ms); }
+ * ```
  */
 
 @mixin prefix($property, $value, $prefixes: (webkit ms)) {

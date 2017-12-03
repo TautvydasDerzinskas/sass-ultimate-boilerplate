@@ -2,6 +2,17 @@
  * ### Media queries
  * - `Type:` Mixin
  * - `Description:` Easy media queries!
+ * - `Variables:` To change media breakpoint values please set `$grid-breakpoints` variable, default value is:
+ * ```scss
+ * $grid-breakpoints: (
+ *  xs: 0,
+ *  sm: 576px,
+ *  md: 768px,
+ *  lg: 992px,
+ *  xl: 1200px,
+ *  xxl: 1330px
+ * );
+ * ```
  *
  * Usage:
  * ```scss
@@ -13,7 +24,8 @@
  *   @include media-xs() {
  *    background-color: white;
  *   };
- * }```
+ * }
+ * ```
  */
 
 $grid-breakpoints: (

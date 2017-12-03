@@ -2,12 +2,12 @@
  * ### Pixels to rem
  * - `Type:` Function
  * - `Description:` Convert pixels to rems easealy
+ * - `Variables:` You can define base font size by setting variable `$font-base` or by passing second argument to the function e.g. `pxToRem(45px, 14px);`
  *
  * Usage:
  * ```scss
- * div {
- *  height: pxToRem(45px);
- * }```
+ * div { height: pxToRem(45px); }
+ * ```
  */
 
 @function pxToRem($size, $fn-font-base: null) {

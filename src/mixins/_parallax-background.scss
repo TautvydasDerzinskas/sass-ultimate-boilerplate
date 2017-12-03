@@ -5,9 +5,8 @@
  *
  * Usage:
  * ```scss
- * div.msm-header {
- *   @include parallax-background('/assets/images/header2_offset.jpg');
- * }```
+ * .header { @include parallax-background('/assets/images/header2_offset.jpg'); }
+ * ```
  */
 
 @mixin parallax-background($url) {

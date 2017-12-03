@@ -5,10 +5,8 @@
  *
  * Usage:
  * ```scss
- * a {
- *   color: gray;
- *   @include transition(color .3s ease);
- * }```
+ * .animated-div { @include transition(color .3s ease); }
+ * ```
  */
 
 @mixin transition($args...) {

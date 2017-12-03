@@ -15,7 +15,8 @@
  *   height: 100px;
  *   background: black;
  *   @include animation('slide-down 5s 3');
- * }```
+ * }
+ * ```
  */
 
 @mixin keyframes($animation-name) {

@@ -2,15 +2,13 @@
  * ### Float
  * - `Type:` Animation
  * - `Description:` Floating/hovering animation
+ * - `Variables:` To change spin speed please set variable `$flaot-animation-speed` to your prefered speed (default is `4s`) before `importing sass-boilerplate` or `animations` only
  *
  * Usage:
  * ```scss
- * div {
- *  @extend %animation-float;
- * }```
+ * div { @extend %animation-float; }
+ * ```
  */
-
-$flaot-animation-speed: 4s;
 
 @keyframes float {
 	0% {
@@ -28,6 +26,8 @@ $flaot-animation-speed: 4s;
 }
 
 %animation-float {
+	$flaot-animation-speed: 4s !default;
+
   -webkit-animation: float $flaot-animation-speed ease-in-out infinite;
   -moz-animation: float $flaot-animation-speed ease-in-out infinite;
   -ms-animation: float $flaot-animation-speed ease-in-out infinite;

@@ -5,17 +5,10 @@
  *
  * Usage:
  * ```scss
- * .test-1 {
- *  @include linear-gradient(#31B7D7, #EDAC7D);
- * }
- *
- * .test-2 {
- *   @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);
- * }
- *
- * .test-3 {
- *   @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);
- * }```
+ * .test-1 { @include linear-gradient(#31B7D7, #EDAC7D); }
+ * .test-2 { @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%); }
+ * .test-3 { @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%); }
+ * ```
  */
 
 @function convert-angle($value, $unit) {

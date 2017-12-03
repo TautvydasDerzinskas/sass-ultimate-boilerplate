@@ -2,15 +2,13 @@
  * ### Spin
  * - `Type:` Animation
  * - `Description:` 360deg infinite spinning animation
+ * - `Variables:` To change spin speed please set variable `$pulse-animation-speed` to your prefered speed (default is `0.5s`) before `importing sass-boilerplate` or `animations` only
  *
  * Usage:
  * ```scss
- * div {
- *  @extend %spin;
- * }```
+ * div { @extend %spin; }
+ * ```
  */
-
-$spin-animation-speed: 0.5s;
 
 @-webkit-keyframes rotating {
   from {
@@ -42,6 +40,8 @@ $spin-animation-speed: 0.5s;
 }
 
 %spin {
+  $spin-animation-speed: 0.5s !default;
+
   display: inline-block;
   -webkit-animation: rotating $spin-animation-speed linear infinite;
   -moz-animation: rotating $spin-animation-speed linear infinite;

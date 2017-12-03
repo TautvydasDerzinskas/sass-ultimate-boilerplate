@@ -2,12 +2,21 @@
  * ### Fixed Z index
  * - `Type:` Function
  * - `Description:` Have and use a ordered and listed z-index values!
+ * - `Variables`: You can set your z-index order array by setting variable `$z-indexes`, for example default value is:
+ * ```scss
+ * $z-indexes: (
+ *  "outdated-browser",
+ *  "modal",
+ *  "site-header",
+ *  "page-wrapper",
+ *  "site-footer"
+ * );
+ * ```
  *
  * Usage:
  * ```scss
- * div.header {
- *  z-index: z('site-header');
- * }```
+ * div.header { z-index: z('site-header'); }
+ * ```
  */
 
 $z-indexes: (
@@ -16,7 +25,7 @@ $z-indexes: (
   "site-header",
   "page-wrapper",
   "site-footer"
-);
+) !default;
 
 @function z($name) {
   @if index($z-indexes, $name) {

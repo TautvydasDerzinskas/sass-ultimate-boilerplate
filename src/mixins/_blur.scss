@@ -5,9 +5,8 @@
  *
  * Usage:
  * ```scss
- * .blured-text {
- *   @include blur(0.8);
- * }```
+ * .blured-text { @include blur(0.8); }
+ * ```
  */
 
 @mixin blur($blur) {

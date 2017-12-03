@@ -5,9 +5,8 @@
  *
  * Usage:
  * ```scss
- * .card {
- *   @include flex-order(-1);
- * }```
+ * .card { @include flex-order(-1); }
+ * ```
  */
 
 @mixin flex-order($position) {

@@ -18,6 +18,7 @@
 - [About](#about)
 - [Installation](#installation)
 - [How to use?](#how-to-use)
+- [License](#license)
 - [Features](#features)
 
 ## About
@@ -29,6 +30,25 @@ Sass boilerplate which is useful when starting a new web project. Includes: vari
 
 ## How to use
 * In one of your sass files (preferably top of the root sass file) import sass-ultimate-boilerplate with a fallowing code:
-```@import "~sass-ultimate-boilerplate/src/sass-boilerplate";```
+```scss
+@import "~sass-ultimate-boilerplate/src/sass-boilerplate";
+```
+
+If you are developing encapsulating components (for example Angular components) you can also import `animations`, `functions` and `mixins` separately like so:
+1. Import animations only:
+```scss
+@import "~sass-ultimate-boilerplate/src/animations";
+```
+2. Import functions only:
+```scss
+@import "~sass-ultimate-boilerplate/src/functions";
+```
+1. Import mixins only:
+```scss
+@import "~sass-ultimate-boilerplate/src/mixins";
+```
+
+## License
+The repository code is open-sourced software licensed under the [MIT license](https://github.com/SlimDogs/sass-ultimate-boilerplate/blob/master/LICENSE?raw=true).
 
 ## Features
