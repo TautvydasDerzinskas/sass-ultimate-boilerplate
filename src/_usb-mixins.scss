@@ -7,6 +7,7 @@
  * - [Flex order](#flex-order)
  * - [Gradient](#gradient)
  * - [Animation and keyframes](#animation-and-keyframes)
+ * - [Media queries](#media-queries)
  * - [Opacity](#opacity)
  * - [Parallax background](#parallax-background)
  * - [Placeholder](#placeholder)
@@ -21,6 +22,7 @@
 @import "mixins/usb-mixin-flex-order";
 @import "mixins/usb-mixin-gradient";
 @import "mixins/usb-mixin-keyframes";
+@import "mixins/usb-mixin-media";
 @import "mixins/usb-mixin-opacity";
 @import "mixins/usb-mixin-parallax-background";
 @import "mixins/usb-mixin-placeholder";

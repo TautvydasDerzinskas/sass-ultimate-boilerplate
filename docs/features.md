@@ -128,26 +128,13 @@ Usage:
 - `Variables:`
 > 🔖 `$usb-grid-breakpoints` - array holding breakpoints sizes (for default value look below)
 ```scss
-$usb-grid-breakpoints: (
-xs: 0,
-sm: 576px,
-md: 768px,
-lg: 992px,
-xl: 1200px,
-xxl: 1330px
-);
+$usb-grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1330px);
 ```
 
 Usage:
 ```scss
 .element {
-width: 100px;
-height: 100px;
-background-color: black;
-
-@include usb-media-xs() {
-background-color: white;
-};
+@include usb-media-xs() { background-color: white; };
 }
 ```
 
