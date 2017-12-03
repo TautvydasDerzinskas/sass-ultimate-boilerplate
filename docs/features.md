@@ -15,6 +15,7 @@
 - [Flex order](#flex-order)
 - [Gradient](#gradient)
 - [Animation and keyframes](#animation-and-keyframes)
+- [Media queries](#media-queries)
 - [Opacity](#opacity)
 - [Parallax background](#parallax-background)
 - [Placeholder](#placeholder)
