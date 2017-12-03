@@ -4,7 +4,8 @@
  * - `Description:` Vendorized border-radius shortcut
  *
  * Usage:
- * ```.card {
+ * ```scss
+ * .card {
  *   @include border-radius(0.8);
  * }```
  */

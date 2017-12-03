@@ -4,7 +4,8 @@
  * - `Description:` Vendorized box-shadow shortcut
  *
  * Usage:
- * ```.element {
+ * ```scss
+ * .element {
  *   @include box-shadow(5px, 3px, 10px, #000);
  * }```
  */

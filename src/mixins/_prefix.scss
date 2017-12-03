@@ -4,7 +4,8 @@
  * - `Description:` Prefix or vendorize your style attributes
  *
  * Usage:
- * ```span.icon {
+ * ```scss
+ * span.icon {
  *   @include prefix(transform, rotate(45deg), webkit ms);
  * }```
  */

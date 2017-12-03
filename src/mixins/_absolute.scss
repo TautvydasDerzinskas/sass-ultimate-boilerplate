@@ -4,7 +4,8 @@
  * - `Description:` Shortcut for setting position absolute with all positions containing same value
  *
  * Usage:
- * ```div {
+ * ```scss
+ * div {
  *  @include absolute(10px);
  * }```
  */

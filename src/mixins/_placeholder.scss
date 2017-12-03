@@ -4,7 +4,8 @@
  * - `Description:` Easy way of setting placeholder stylings
  *
  * Usage:
- * ```input.element {
+ * ```scss
+ * input.element {
  *   @include placeholder {
  *       font-style:italic;
  *       color: white;

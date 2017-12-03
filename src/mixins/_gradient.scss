@@ -4,7 +4,8 @@
  * - `Description:` Comfortable way of setting css gradients!
  *
  * Usage:
- * ```.test-1 {
+ * ```scss
+ * .test-1 {
  *  @include linear-gradient(#31B7D7, #EDAC7D);
  * }
  *

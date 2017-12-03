@@ -4,7 +4,8 @@
  * - `Description:` Set parallax image backfround easy!
  *
  * Usage:
- * ```div.msm-header {
+ * ```scss
+ * div.msm-header {
  *   @include parallax-background('/assets/images/header2_offset.jpg');
  * }```
  */

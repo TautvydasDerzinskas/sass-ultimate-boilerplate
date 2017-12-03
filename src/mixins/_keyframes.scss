@@ -4,7 +4,8 @@
  * - `Description:` Vendorized animation & keyframes shortcut
  *
  * Usage:
- * ```@include keyframes(slide-down) {
+ * ```scss
+ * @include keyframes(slide-down) {
  *   0% { opacity: 1; }
  *   90% { opacity: 0; }
  * }
