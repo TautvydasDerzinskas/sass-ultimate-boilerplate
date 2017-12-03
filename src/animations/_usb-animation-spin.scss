@@ -2,13 +2,25 @@
  * ### Spin
  * - `Type:` Animation
  * - `Description:` 360deg infinite spinning animation
- * - `Variables:` To change spin speed please set variable `$pulse-animation-speed` to your prefered speed (default is `0.5s`) before `importing sass-boilerplate` or `animations` only
+ * - `Variables:`
+ * > 🔖 `$usb-spin-animation-speed` - animation speed (default value is `0.5s`)
  *
  * Usage:
  * ```scss
- * div { @extend %spin; }
+ * div { @extend %usb-animation-spin; }
  * ```
  */
+
+%usb-animation-spin {
+  $usb-spin-animation-speed: 0.5s !default;
+
+  display: inline-block;
+  -webkit-animation: rotating $usb-spin-animation-speed linear infinite;
+  -moz-animation: rotating $usb-spin-animation-speed linear infinite;
+  -ms-animation: rotating $usb-spin-animation-speed linear infinite;
+  -o-animation: rotating $usb-spin-animation-speed linear infinite;
+  animation: rotating $usb-spin-animation-speed linear infinite;
+}
 
 @-webkit-keyframes rotating {
   from {
@@ -37,15 +49,4 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-%spin {
-  $spin-animation-speed: 0.5s !default;
-
-  display: inline-block;
-  -webkit-animation: rotating $spin-animation-speed linear infinite;
-  -moz-animation: rotating $spin-animation-speed linear infinite;
-  -ms-animation: rotating $spin-animation-speed linear infinite;
-  -o-animation: rotating $spin-animation-speed linear infinite;
-  animation: rotating $spin-animation-speed linear infinite;
 }

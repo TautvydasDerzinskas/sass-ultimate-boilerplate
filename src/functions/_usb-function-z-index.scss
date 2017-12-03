@@ -1,0 +1,38 @@
+/**
+ * ### Clean z index
+ * - `Type:` Function
+ * - `Description:` Helps to set `z-index` for your elements
+ * - `Variables`:
+ * > 🔖 `$usb-z-indexes` - array of specifically ordered option (for default value look below)
+ * ```scss
+ * $usb-z-indexes: (
+ *  "outdated-browser",
+ *  "modal",
+ *  "site-header",
+ *  "page-wrapper",
+ *  "site-footer"
+ * );
+ * ```
+ *
+ * Usage:
+ * ```scss
+ * .header { z-index: usb-z-index('site-header'); }
+ * ```
+ */
+
+$usb-z-indexes: (
+  "outdated-browser",
+  "modal",
+  "site-header",
+  "page-wrapper",
+  "site-footer"
+) !default;
+
+@function usb-z-index($name) {
+  @if index($usb-z-indexes, $name) {
+      @return (length($usb-z-indexes) - index($usb-z-indexes, $name)) + 1;
+  } @else {
+      @warn 'There is no item "#{$name}" in this list; choose one of: #{$usb-z-indexes}';
+      @return null;
+  }
+}

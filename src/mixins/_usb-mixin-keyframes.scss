@@ -1,25 +1,20 @@
 /**
  * ### Animation and keyframes
  * - `Type:` Mixin
- * - `Description:` Vendorized animation & keyframes shortcut
+ * - `Description:` Vendorized animation & keyframes
  *
  * Usage:
  * ```scss
- * @include keyframes(slide-down) {
+ * @include usb-keyframes(slide-down) {
  *   0% { opacity: 1; }
  *   90% { opacity: 0; }
  * }
  *
- * .element {
- *   width: 100px;
- *   height: 100px;
- *   background: black;
- *   @include animation('slide-down 5s 3');
- * }
+ * .animated-element { @include usb-animation('slide-down 5s 3'); }
  * ```
  */
 
-@mixin keyframes($animation-name) {
+@mixin usb-keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
   }
@@ -37,7 +32,7 @@
   }
 }
 
-@mixin animation($str) {
+@mixin usb-animation($str) {
   -webkit-animation: #{$str};
   -moz-animation: #{$str};
   -ms-animation: #{$str};

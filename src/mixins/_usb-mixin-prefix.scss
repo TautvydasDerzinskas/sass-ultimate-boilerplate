@@ -1,15 +1,15 @@
 /**
  * ### Prefix or Vendorize
  * - `Type:` Mixin
- * - `Description:` Prefix or vendorize your style attributes
+ * - `Description:` Prefix / vendorize without a problem
  *
  * Usage:
  * ```scss
- * .icon { @include prefix(transform, rotate(45deg), webkit ms); }
+ * .icon { @include usb-prefix(transform, rotate(45deg), webkit ms); }
  * ```
  */
 
-@mixin prefix($property, $value, $prefixes: (webkit ms)) {
+@mixin usb-prefix($property, $value, $prefixes: (webkit ms)) {
   @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
   }

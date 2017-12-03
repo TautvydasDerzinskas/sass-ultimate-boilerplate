@@ -1,15 +1,15 @@
 /**
  * ### Border-radius
  * - `Type:` Mixin
- * - `Description:` Vendorized border-radius shortcut
+ * - `Description:` Vendorized border-radius
  *
  * Usage:
  * ```scss
- * .card { @include border-radius(0.8); }
+ * .card { @include usb-border-radius(0.8); }
  * ```
  */
 
-@mixin border-radius($radius) {
+@mixin usb-border-radius($radius) {
 	border-radius: $radius !important;
 	-webkit-border-radius: $radius !important;
 	-moz-border-radius: $radius !important;

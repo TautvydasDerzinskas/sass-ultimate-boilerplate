@@ -5,7 +5,7 @@
 
 ### Functions
 - [Pixels to rem](#pixels-to-rem)
-- [Fixed Z index](#fixed-z-index)
+- [Clean z-index](#clean-z-index)
 
 ### Mixins
 - [Absolute](#absolute)
@@ -23,20 +23,22 @@
 
 ### Pixels to rem
 - `Type:` Function
-- `Description:` Convert pixels to rems easealy
-- `Variables:` You can define base font size by setting variable `$font-base` or by passing second argument to the function e.g. `pxToRem(45px, 14px);`
+- `Description:` Convert pixels to rems
+- `Variables:`
+> 🔖`$usb-font-base` - optional variable for base font size (you can also pass second argument to the function e.g. `usb-px-to-rem(45px, 14px);`
 
 Usage:
 ```scss
-div { height: pxToRem(45px); }
+div { height: usb-px-to-rem(45px); }
 ```
 
-### Fixed Z index
+### Clean z index
 - `Type:` Function
-- `Description:` Have and use a ordered and listed z-index values!
-- `Variables`: You can set your z-index order array by setting variable `$z-indexes`, for example default value is:
+- `Description:` Helps to set `z-index` for your elements
+- `Variables`:
+> 🔖 `$usb-z-indexes` - array of specifically ordered option (for default value look below)
 ```scss
-$z-indexes: (
+$usb-z-indexes: (
 "outdated-browser",
 "modal",
 "site-header",
@@ -47,16 +49,16 @@ $z-indexes: (
 
 Usage:
 ```scss
-div.header { z-index: z('site-header'); }
+.header { z-index: usb-z-index('site-header'); }
 ```
 
 ### Absolute
 - `Type:` Mixin
-- `Description:` Shortcut for setting position absolute with all positions containing same value
+- `Description:` Helps setting absolute position with same position value for all sides
 
 Usage:
 ```scss
-div { @include absolute(10px); }
+.absoluted-element { @include usb-absolute(10px); }
 ```
 
 ### Blur
@@ -65,72 +67,68 @@ div { @include absolute(10px); }
 
 Usage:
 ```scss
-.blured-text { @include blur(0.8); }
+.blured-text { @include usb-blur(0.8); }
 ```
 
 ### Border-radius
 - `Type:` Mixin
-- `Description:` Vendorized border-radius shortcut
+- `Description:` Vendorized border-radius
 
 Usage:
 ```scss
-.card { @include border-radius(0.8); }
+.card { @include usb-border-radius(0.8); }
 ```
 
 ### Box-shadow
 - `Type:` Mixin
-- `Description:` Vendorized box-shadow shortcut
+- `Description:` Vendorized box-shadow
 
 Usage:
 ```scss
-.element { @include box-shadow(5px, 3px, 10px, #000); }
+.ninja-in-the-shadow { @include usb-box-shadow(5px, 3px, 10px, #000); }
 ```
 
 ### Flex-order
 - `Type:` Mixin
-- `Description:` Vendorized flex-order shortcut
+- `Description:` Vendorized flex-order
 
 Usage:
 ```scss
-.card { @include flex-order(-1); }
+.display-second { @include usb-flex-order(-1); }
 ```
 
 ### Gradient
 - `Type:` Mixin
-- `Description:` Comfortable way of setting css gradients!
+- `Description:` Easy way for creating gradient backgrounds
 
 Usage:
 ```scss
-.test-1 { @include linear-gradient(#31B7D7, #EDAC7D); }
-.test-2 { @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%); }
-.test-3 { @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%); }
+.test-1 { @include usb-linear-gradient(#31B7D7, #EDAC7D); }
+.test-2 { @include usb-linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%); }
+.test-3 { @include usb-linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%); }
 ```
 
 ### Animation and keyframes
 - `Type:` Mixin
-- `Description:` Vendorized animation & keyframes shortcut
+- `Description:` Vendorized animation & keyframes
 
 Usage:
 ```scss
-@include keyframes(slide-down) {
+@include usb-keyframes(slide-down) {
 0% { opacity: 1; }
 90% { opacity: 0; }
 }
 
-.element {
-width: 100px;
-height: 100px;
-background: black;
-@include animation('slide-down 5s 3');
-}
+.animated-element { @include usb-animation('slide-down 5s 3'); }
 ```
 
 ### Media queries
 - `Type:` Mixin
 - `Description:` Easy media queries!
-- `Variables:` To change media breakpoint values please set `$grid-breakpoints` variable, default value is:
+- `Variables:`
+> 🔖 `$usb-grid-breakpoints` - array holding breakpoints sizes (for default value look below)
 ```scss
-$grid-breakpoints: (
+$usb-grid-breakpoints: (
 xs: 0,
 sm: 576px,
 md: 768px,
@@ -147,7 +145,7 @@ width: 100px;
 height: 100px;
 background-color: black;
 
-@include media-xs() {
+@include usb-media-xs() {
 background-color: white;
 };
 }
@@ -155,81 +153,82 @@ background-color: white;
 
 ### Opacity
 - `Type:` Mixin
-- `Description:` Vendorized opacity shortcut
+- `Description:` Vendorized opacity
 
 Usage:
 ```scss
-.faded-text { @include opacity(0.8); }
+.faded-text { @include usb-opacity(0.8); }
 ```
 
 ### Parallax background
 - `Type:` Mixin
-- `Description:` Set parallax image backfround easy!
+- `Description:` Easy way to create parallax image background
 
 Usage:
 ```scss
-.header { @include parallax-background('/assets/images/header2_offset.jpg'); }
+.header { @include usb-parallax-background('/assets/images/header2_offset.jpg'); }
 ```
 
 ### Placeholder
 - `Type:` Mixin
-- `Description:` Easy way of setting placeholder stylings
+- `Description:` Easy way to set placeholder style
 
 Usage:
 ```scss
-input.element {
-@include placeholder {
-font-style:italic;
-color: white;
-font-weight:100;
-}
+input.password-italic {
+@include usb-placeholder { font-style:italic; }
 }
 ```
 
 ### Prefix or Vendorize
 - `Type:` Mixin
-- `Description:` Prefix or vendorize your style attributes
+- `Description:` Prefix / vendorize without a problem
 
 Usage:
 ```scss
-.icon { @include prefix(transform, rotate(45deg), webkit ms); }
+.icon { @include usb-prefix(transform, rotate(45deg), webkit ms); }
 ```
 
 ### Transition
 - `Type:` Mixin
-- `Description:` Vendorized transitions
+- `Description:` Vendorized transition
 
 Usage:
 ```scss
-.animated-div { @include transition(color .3s ease); }
+.animated-div { @include usb-transition(color .3s ease); }
 ```
 
 ### Float
 - `Type:` Animation
 - `Description:` Floating/hovering animation
-- `Variables:` To change spin speed please set variable `$flaot-animation-speed` to your prefered speed (default is `4s`) before `importing sass-boilerplate` or `animations` only
+- `Variables:`
+> 🔖 `$usb-float-animation-speed` - animation speed (default value is `4s`)
 
 Usage:
 ```scss
-div { @extend %animation-float; }
+div { @extend %usb-animation-float; }
 ```
 
 ### Pulse
 - `Type:` Animation
 - `Description:` Pulsing shadow/outline animation
-- `Variables:` To change spin speed please set variable `$pulse-animation-speed` to your prefered speed (default is `2s`) before `importing sass-boilerplate` or `animations` only
+- `Variables:`
+> 🔖 `$usb-pulse-animation-speed` - animation speed (default is `2s`)
+> 🔖 `$usb-pulse-animation-primary-color` - primary pulsation color (default value is `rgba(38, 166, 154, 0.4)`)
+> 🔖 `$usb-pulse-animation-secondary-color` - secondary pulsation color (default value is `rgba(38, 166, 154, 0)`)
 
 Usage:
 ```scss
-div { @extend %pulse; }
+div { @extend %usb-animation-pulse; }
 ```
 
 ### Spin
 - `Type:` Animation
 - `Description:` 360deg infinite spinning animation
-- `Variables:` To change spin speed please set variable `$pulse-animation-speed` to your prefered speed (default is `0.5s`) before `importing sass-boilerplate` or `animations` only
+- `Variables:`
+> 🔖 `$usb-spin-animation-speed` - animation speed (default value is `0.5s`)
 
 Usage:
 ```scss
-div { @extend %spin; }
+div { @extend %usb-animation-spin; }
 ```

@@ -5,11 +5,11 @@
  *
  * Usage:
  * ```scss
- * .blured-text { @include blur(0.8); }
+ * .blured-text { @include usb-blur(0.8); }
  * ```
  */
 
-@mixin blur($blur) {
+@mixin usb-blur($blur) {
   -webkit-filter: blur($blur);
   -moz-filter: blur($blur);
   -o-filter: blur($blur);

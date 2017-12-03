@@ -1,0 +1,27 @@
+/**
+ * ### Pixels to rem
+ * - `Type:` Function
+ * - `Description:` Convert pixels to rems
+ * - `Variables:`
+ * > 🔖`$usb-font-base` - optional variable for base font size (you can also pass second argument to the function e.g. `usb-px-to-rem(45px, 14px);`
+ *
+ * Usage:
+ * ```scss
+ * div { height: usb-px-to-rem(45px); }
+ * ```
+ */
+
+@function usb-px-to-rem($size, $fn-font-base: null) {
+  $base: $size;
+
+  @if ($fn-font-base != null) {
+    $base: $fn-font-base;
+  }
+  @else if ($usb-font-base != null) {
+    $base: $usb-font-base;
+  }
+
+  $remSize: $size / $base * 1rem;
+
+  @return #{$remSize};
+}

@@ -1,9 +1,16 @@
 {
   "name": "sass-ultimate-boilerplate",
-  "description": "Sass boilerplate which is useful when starting a new web project. Includes: variables, functions, mixins, animations and other useful bits!",
+  "description": "Scss boilerplate which is useful when starting a new web based project.",
   "main": "index.js",
-  "repository": "https://github.com/SlimDogs/sass-ultimate-boilerplate.git",
-  "author": "Tautvydas Derzinskas <tautvydasuk@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SlimDogs/sass-ultimate-boilerplate.git"
+  },
+  "author": {
+    "name": "Tautvydas Derzinskas",
+    "email": "tautvydasuk@gmail.com",
+    "url": "http://Tautvydas.info"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -20,6 +27,14 @@
     "gulp-sass-lint": "1.3.4",
     "semantic-release": "8.2.0"
   },
+  "keywords": [
+    "sass",
+    "boilerplate",
+    "functions",
+    "mixins",
+    "animations",
+    "scss"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

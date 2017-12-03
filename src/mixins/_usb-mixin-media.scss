@@ -1,0 +1,112 @@
+/**
+ * ### Media queries
+ * - `Type:` Mixin
+ * - `Description:` Easy media queries!
+ * - `Variables:`
+ * > 🔖 `$usb-grid-breakpoints` - array holding breakpoints sizes (for default value look below)
+ * ```scss
+ * $usb-grid-breakpoints: (
+ *  xs: 0,
+ *  sm: 576px,
+ *  md: 768px,
+ *  lg: 992px,
+ *  xl: 1200px,
+ *  xxl: 1330px
+ * );
+ * ```
+ *
+ * Usage:
+ * ```scss
+ * .element {
+ *   width: 100px;
+ *   height: 100px;
+ *   background-color: black;
+ *
+ *   @include usb-media-xs() {
+ *    background-color: white;
+ *   };
+ * }
+ * ```
+ */
+
+$usb-grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1330px
+) !default;
+
+@mixin usb-media-xs {
+  @media (min-width: #{map-get($usb-grid-breakpoints, xs)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-sm {
+  @media (min-width: #{map-get($usb-grid-breakpoints, sm)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-md {
+  @media (min-width: #{map-get($usb-grid-breakpoints, md)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-lg {
+  @media (min-width: #{map-get($usb-grid-breakpoints, lg)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-xl {
+  @media (min-width: #{map-get($usb-grid-breakpoints, xl)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-xxl {
+  @media (min-width: #{map-get($usb-grid-breakpoints, xxl)}) {
+    @content;
+  }
+}
+
+
+@mixin usb-media-xs-down {
+  @media (max-width: #{map-get($usb-grid-breakpoints, xs)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-sm-down {
+  @media (max-width: #{map-get($usb-grid-breakpoints, sm)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-md-down {
+  @media (max-width: #{map-get($usb-grid-breakpoints, md)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-lg-down {
+  @media (max-width: #{map-get($usb-grid-breakpoints, lg)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-xl-down {
+  @media (max-width: #{map-get($usb-grid-breakpoints, xl)}) {
+    @content;
+  }
+}
+
+@mixin usb-media-xxl-down {
+  @media (max-width: #{map-get($usb-grid-breakpoints, xxl)}) {
+    @content;
+  }
+}

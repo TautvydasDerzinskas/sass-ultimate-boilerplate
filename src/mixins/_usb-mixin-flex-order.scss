@@ -1,15 +1,15 @@
 /**
  * ### Flex-order
  * - `Type:` Mixin
- * - `Description:` Vendorized flex-order shortcut
+ * - `Description:` Vendorized flex-order
  *
  * Usage:
  * ```scss
- * .card { @include flex-order(-1); }
+ * .display-second { @include usb-flex-order(-1); }
  * ```
  */
 
-@mixin flex-order($position) {
+@mixin usb-flex-order($position) {
   -webkit-box-ordinal-group: 0;
   -webkit-order: $position;
   -ms-flex-order: $position;

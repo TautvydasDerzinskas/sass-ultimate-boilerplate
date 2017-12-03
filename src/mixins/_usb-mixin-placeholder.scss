@@ -1,21 +1,17 @@
 /**
  * ### Placeholder
  * - `Type:` Mixin
- * - `Description:` Easy way of setting placeholder stylings
+ * - `Description:` Easy way to set placeholder style
  *
  * Usage:
  * ```scss
- * input.element {
- *   @include placeholder {
- *       font-style:italic;
- *       color: white;
- *       font-weight:100;
- *   }
+ * input.password-italic {
+ *   @include usb-placeholder { font-style:italic; }
  * }
  * ```
  */
 
-@mixin placeholder {
+@mixin usb-placeholder {
   &::-webkit-input-placeholder {@content}
   &:-moz-placeholder {@content}
   &::-moz-placeholder {@content}

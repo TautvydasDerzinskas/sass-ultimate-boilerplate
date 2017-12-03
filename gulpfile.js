@@ -5,7 +5,7 @@ const commentsToMd = require('gulp-comments-to-md')
 const gulpConcat = require('gulp-concat')
 
 gulp.task('[SASS] Compile', () => {
-  return gulp.src('./src/sass-boilerplate.scss')
+  return gulp.src('./src/usb.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('./dist'))
 })

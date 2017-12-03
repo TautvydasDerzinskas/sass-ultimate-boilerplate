@@ -1,13 +1,13 @@
 /**
  * ### Gradient
  * - `Type:` Mixin
- * - `Description:` Comfortable way of setting css gradients!
+ * - `Description:` Easy way for creating gradient backgrounds
  *
  * Usage:
  * ```scss
- * .test-1 { @include linear-gradient(#31B7D7, #EDAC7D); }
- * .test-2 { @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%); }
- * .test-3 { @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%); }
+ * .test-1 { @include usb-linear-gradient(#31B7D7, #EDAC7D); }
+ * .test-2 { @include usb-linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%); }
+ * .test-3 { @include usb-linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%); }
  * ```
  */
 
@@ -57,7 +57,7 @@
   @return 90deg - convert-angle($value, 'deg');
 }
 
-@mixin linear-gradient($direction, $color-stops...) {
+@mixin usb-linear-gradient($direction, $color-stops...) {
   @if is-direction($direction) == false {
     $color-stops: ($direction, $color-stops);
     $direction: 180deg;

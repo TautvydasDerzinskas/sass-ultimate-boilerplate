@@ -1,0 +1,53 @@
+/**
+ * ### Pulse
+ * - `Type:` Animation
+ * - `Description:` Pulsing shadow/outline animation
+ * - `Variables:`
+ * > 🔖 `$usb-pulse-animation-speed` - animation speed (default is `2s`)
+ * > 🔖 `$usb-pulse-animation-primary-color` - primary pulsation color (default value is `rgba(38, 166, 154, 0.4)`)
+ * > 🔖 `$usb-pulse-animation-secondary-color` - secondary pulsation color (default value is `rgba(38, 166, 154, 0)`)
+ *
+ * Usage:
+ * ```scss
+ * div { @extend %usb-animation-pulse; }
+ * ```
+ */
+
+%usb-animation-pulse {
+  $usb-pulse-animation-speed: 2s !default;
+
+  animation: pulse $usb-pulse-animation-speed infinite;
+
+  &:hover {
+    animation: none;
+  }
+}
+
+$usb-pulse-animation-primary-color: rgba(38, 166, 154, 0.4) !default;
+$usb-pulse-animation-secondary-color: rgba(38, 166, 154, 0) !default;
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: $usb-pulse-animation-primary-color;
+  }
+  70% {
+      -webkit-box-shadow: $usb-pulse-animation-secondary-color;
+  }
+  100% {
+      -webkit-box-shadow: $usb-pulse-animation-secondary-color;
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 $usb-pulse-animation-primary-color;
+    box-shadow: 0 0 0 0 $usb-pulse-animation-primary-color;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px $usb-pulse-animation-secondary-color;
+      box-shadow: 0 0 0 10px $usb-pulse-animation-secondary-color;
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 $usb-pulse-animation-secondary-color;
+      box-shadow: 0 0 0 0 $usb-pulse-animation-secondary-color;
+  }
+}
