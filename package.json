@@ -25,7 +25,7 @@
     "gulp-concat": "2.6.1",
     "gulp-sass": "4.0.0",
     "gulp-sass-lint": "1.4.0",
-    "semantic-release": "15.1.5"
+    "semantic-release": "15.4.2"
   },
   "keywords": [
     "sass",
