@@ -23,7 +23,7 @@
     "gulp": "3.9.1",
     "gulp-comments-to-md": "1.0.3",
     "gulp-concat": "2.6.1",
-    "gulp-sass": "4.0.0",
+    "gulp-sass": "4.0.2",
     "gulp-sass-lint": "1.4.0",
     "semantic-release": "15.4.2"
   },
