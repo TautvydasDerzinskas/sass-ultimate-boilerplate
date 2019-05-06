@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "2.1.0",
-    "gulp": "4.0.0",
+    "gulp": "4.0.2",
     "gulp-comments-to-md": "1.0.3",
     "gulp-concat": "2.6.1",
     "gulp-sass": "4.0.2",
