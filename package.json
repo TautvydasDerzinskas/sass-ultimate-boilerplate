@@ -19,7 +19,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "2.1.0",
+    "cz-conventional-changelog": "3.0.1",
     "gulp": "4.0.0",
     "gulp-comments-to-md": "1.0.3",
     "gulp-concat": "2.6.1",
